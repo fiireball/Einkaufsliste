@@ -8,6 +8,7 @@ html {
     border: 1px solid gray;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .einkaufsliste {
@@ -15,6 +16,7 @@ html {
     margin: 1em;
     padding: 1em;
     width: 1fr;
+    max-width: 300px;
 }
 
 .erledigt {
