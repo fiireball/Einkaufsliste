@@ -1,0 +1,22 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.4em;
+    font-size: 1.5em;
+}
+
+.main-container {
+    border: 1px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.einkaufsliste {
+    border: 1px solid lightgrey;
+    margin: 1em;
+    padding: 1em;
+    width: 1fr;
+}
+
+.erledigt {
+    text-decoration: line-through;
+}
