@@ -5,3 +5,4 @@ lists.forEach(list => {
         list.classList.toggle('erledigt')
     })
 })
+
