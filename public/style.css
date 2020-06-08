@@ -135,3 +135,15 @@ label{
     color: darkred;
     float: right;
 }
+
+.einkaufsliste h2{
+    padding-bottom: 0.5em;
+}
+
+.einkaufsliste ul{
+    padding-left: 2em;
+}
+
+#myCheck{
+    float: right;
+}
