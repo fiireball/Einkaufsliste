@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <html>
 <body>
+<div class="page-container">
+<div class="header">
+    <div class="inner-header">
+        <div class="icon-container">
+            <i class="material-icons">shopping_cart</i>
+            <h1>Einkaufsliste</h1>
+        </div>
+
+        <div class="show-form-button">
+            <button id="plus-button"><i id="add-circle" class="material-icons">add_circle</i></button>
+        </div>
+    </div>
+
+    <div class="form hidden">
+            <div class="textfield-container">
+                <label for="meal-name">Name of meal</label>
+                <input type="text" name="meal" id="meal" required autofocus>
+            </div>
+            <div class="textfield-container">
+                <label for="ingredients">Ingredients</label>
+                <input type="text" name="ingredients" id="ingredients">
+            </div>
+            <div class="button-container">
+            <button id="add-meal">Add Meal</button>
+        </div>
+    </div>
+</div>
 <div class="main-container">
     <div class="einkaufsliste">
         <h2>Quesidillas</h2>
@@ -27,37 +56,9 @@
             <li>Fertig Soße</li>
         </ul>
     </div>
-    <div class="einkaufsliste">
-        <h2>Bratkartoffeln</h2>
-        <ul>
-            <li>Festkochende Kartoffeln</li>
-            <li>Butter</li>
-            <li>Rote Zwiebeln</li>
-            <li>Speckwürfel</li>
-            <li>Sauce Hollandaise (Marke: Lukoll)</li>
-            <li>Sambal Oelek</li>
-        </ul>
-    </div>
-    <div class="einkaufsliste">
-        <h2>Frühstücks Kram</h2>
-        <ul>
-            <li>Brötchen / Brot</li>
-            <li>Wurst und so</li>
-
-        </ul>
-    </div>
-    <div class="einkaufsliste">
-        <h2>Sonstiges</h2>
-        <ul>
-            <li>Wasser</li>
-            <li>Klopapier</li>
-            <li>Instant Kaffee</li>
-            <li>H-Milch</li>
-            <li>Hab bestimmt was vergessen</li>
-        </ul>
-    </div>
     <h2 style="margin-left: 2em;">Danke!</h2>
-</div>    
+</div>   
+</div> 
 </body>
 </html>
 <script src="script.js"></script>
