@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header">
+          <div class="inner-header">
+              <div class="icon-container">
+                  <i class="material-icons">shopping_cart</i>
+                  <h1>Einkaufsliste</h1>
+              </div>
+      
+              <div class="show-form-button">
+                  <button id="plus-button"><i id="add-circle" class="material-icons">add_circle</i></button>
+              </div>
+          </div>
+      
+          <div class="form hidden">
+                  <div class="textfield-container">
+                      <label for="meal-name">Name of meal</label>
+                      <input type="text" name="meal" id="meal" required autofocus>
+                  </div>
+                  <div class="textfield-container">
+                      <label for="ingredients">Ingredients</label>
+                      <input type="text" name="ingredients" id="ingredients">
+                  </div>
+                  <div class="button-container">
+                  <button id="add-meal">Add Meal</button>
+              </div>
+          </div>
+      </div>
+      <div class="main-container">
+          <div class="einkaufsliste">
+              <h2>Quesidillas</h2>
+              <ul>
+                  <li>Tortillas</li>
+                  <li>Dosen-Mais (wenn möglich: mehrere kleine)</li>
+                  <li>Salsa-Soße (Flasche)</li>
+                  <li>Frischkäse (fett)</li>
+                  <li>Hühnchen Brustfilet</li>
+                  <li>Jalapenos</li>
+                  <li>Geriebener Käse (Gouda/Mozarella)</li>
+              </ul>
+          </div>
+          <div class="einkaufsliste">
+              <h2>Spaghetti</h2>
+              <ul>
+                  <li>Spaghetti</li>
+                  <li>Oliven Öl</li>
+                  <li>Knoblauch</li>
+                  <li>Rote Pepperoni</li>
+                  <li>2x Parmesan</li>
+                  <li>Fertig Soße</li>
+              </ul>
+          </div>
+          <h2 style="margin-left: 2em;">Danke!</h2>
+      </div>   
+      </div> 
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDGBbVTsqARLprQ0pyDsxyoqsgQAWxPih4",
+        authDomain: "einkaufsliste-9d19b.firebaseapp.com",
+        databaseURL: "https://einkaufsliste-9d19b.firebaseio.com",
+        projectId: "einkaufsliste-9d19b",
+        storageBucket: "einkaufsliste-9d19b.appspot.com",
+        messagingSenderId: "316391318087",
+        appId: "1:316391318087:web:89f088a5820c4bf4da0762",
+        measurementId: "G-21HHQ3NXGG"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

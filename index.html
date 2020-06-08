@@ -33,32 +33,39 @@
     </div>
 </div>
 <div class="main-container">
-    <div class="einkaufsliste">
-        <h2>Quesidillas</h2>
-        <ul>
-            <li>Tortillas</li>
-            <li>Dosen-Mais (wenn möglich: mehrere kleine)</li>
-            <li>Salsa-Soße (Flasche)</li>
-            <li>Frischkäse (fett)</li>
-            <li>Hühnchen Brustfilet</li>
-            <li>Jalapenos</li>
-            <li>Geriebener Käse (Gouda/Mozarella)</li>
-        </ul>
-    </div>
-    <div class="einkaufsliste">
-        <h2>Spaghetti</h2>
-        <ul>
-            <li>Spaghetti</li>
-            <li>Oliven Öl</li>
-            <li>Knoblauch</li>
-            <li>Rote Pepperoni</li>
-            <li>2x Parmesan</li>
-            <li>Fertig Soße</li>
-        </ul>
-    </div>
-    <h2 style="margin-left: 2em;">Danke!</h2>
+
+</div>
 </div>   
 </div> 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDGBbVTsqARLprQ0pyDsxyoqsgQAWxPih4",
+    authDomain: "einkaufsliste-9d19b.firebaseapp.com",
+    databaseURL: "https://einkaufsliste-9d19b.firebaseio.com",
+    projectId: "einkaufsliste-9d19b",
+    storageBucket: "einkaufsliste-9d19b.appspot.com",
+    messagingSenderId: "316391318087",
+    appId: "1:316391318087:web:89f088a5820c4bf4da0762",
+    measurementId: "G-21HHQ3NXGG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+
+</script>
 </body>
 </html>
 <script src="script.js"></script>

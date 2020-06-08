@@ -1,32 +1,26 @@
 const mainContainer = document.querySelector(".main-container")
 
-let myBasketObj = {}
 
 
-db.collection('meals').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        myBasketObj = doc.data()
-    })
-})
 
+let myBasket = [
+                {name: "Pizza", ingredients: ["Mehl", "Oliven Öl", "Hefe"]},
+                {name: "Bratkartoffeln", ingredients: ["Festkochende Kartoffeln", "Butter", "Zwiebel", "Speck"]}
+            ];
 
-const mealFactory = (name, ingredients) => {
-    return { name, ingredients };
-  };
-  
-
+function Meal(name, ingredients) {
+  this.name = name;
+  this.ingredients = ingredients;
+}
 
 function addMealToBasket(meal) {
-  myBasketObj.myBasket.push(meal)
-  db.collection('meals').doc('CP925ziIY9Xrv01srXEp').set(myBasketObj)
-  render(myBasketObj.myBasket)
+  myBasket.push(meal)
+  render(myBasket)
 }
 
 function render(BasketArray) {
 
     clearElements()
-
-
 
     BasketArray.forEach(meal => {
         const div = document.createElement('div')
@@ -36,7 +30,7 @@ function render(BasketArray) {
         const button = document.createElement('button')
 
         div.classList.add('einkaufsliste')
-        div.setAttribute('data-id', myBasketObj.myBasket.indexOf(meal))
+        div.setAttribute('data-id', myBasket.indexOf(meal))
 
         h2.textContent = meal.name
         deleteIcon.classList.add('material-icons', 'delete-icon')
@@ -61,9 +55,8 @@ function render(BasketArray) {
         button.addEventListener('click', () => {
             areYouSure = window.confirm(`Delete ${button.nextSibling.textContent} from the list?`)
             if (areYouSure) {
-                myBasketObj.myBasket.splice(parseInt(button.parentElement.dataset.id), 1)
-                db.collection('meals').doc('CP925ziIY9Xrv01srXEp').set(myBasketObj)
-                render(myBasketObj.myBasket)
+                myBasket.splice(parseInt(button.parentElement.dataset.id), 1)
+                render(myBasket)
         }
     })
 })
@@ -98,16 +91,10 @@ const addMealButton = document.querySelector('#add-meal')
 addMealButton.addEventListener('click', () => {
     const mealName = document.querySelector('#meal').value
     const ingredientsArr = document.querySelector('#ingredients').value.split(', ')
-    addMealToBasket(mealFactory(mealName, ingredientsArr))
+    addMealToBasket(new Meal(mealName, ingredientsArr))
+
 })
 
-// const meal3 = mealFactory('Test Meal', ['Suppe', 'Kartoffeln']);
 
-setTimeout(() => {  render(myBasketObj.myBasket); }, 500);
+render(myBasket)
 
-
-//db.collection('meals').get().then((snapshot) => {
-//    snapshot.docs.forEach(doc => {
-//        myBasketObj = doc.data()
-//    })
-//})
