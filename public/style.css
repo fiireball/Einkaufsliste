@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-
     text-decoration: none;
 }
 
@@ -141,7 +140,7 @@ label{
 }
 
 .einkaufsliste ul{
-    padding-left: 2em;
+    padding-left: 1.2em;
 }
 
 #myCheck{
